@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plotting Corona Map</title>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #map{
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='map'></div>
+</body>
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoicHJhbmF5a3VtYXIwNzQiLCJhIjoiY2w0Y2sxemUwMDExMDNwcWc5dXExYnpqayJ9.ze1RwEdA6RbefeN5EL3x5g';
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/dark-v10', // style URL
+        center: [-74.5, 40], // starting position [lng, lat]
+        zoom: 1,
+        center: [0,40] // starting zoom
+    });
+</script>
+<script src="index.js"></script>
+
+</html>
